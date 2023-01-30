@@ -3,17 +3,18 @@
 function compareTrue (boolean1, boolean2) {
   if (boolean1 && boolean2 === true) {
     return true;
-  }
-
-  else {
+  } else {
     return false;
   }
 }
 
-console.log(compareTrue(true, true));
-console.log(compareTrue(true, false));
-
 // Desafio 2 - Crie a função splitSentence
+
+function splitSentence (sentence) {
+  return sentence.split(" ");
+}
+
+// https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20splits,string%20is%20split%20between%20words.
 
 // Desafio 3 - Crie a função concatName
 
