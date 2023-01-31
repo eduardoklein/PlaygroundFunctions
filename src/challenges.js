@@ -75,8 +75,27 @@ function catAndMouse(mouse, cat1, cat2){
   }
 }
 
+// https://stackoverflow.com/questions/5574144/positive-number-to-negative-number-in-javascript
 
 // Desafio 8 - Crie a função fizzBuzz
+
+function fizzBuzz(numeros){
+  const arrayFizzBuzz = [];
+  for (let index = 0; index < numeros.length; ++index){
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0){
+      arrayFizzBuzz[index] = 'fizzBuzz';
+    }else {
+      if (numeros[index] % 3 === 0){
+        arrayFizzBuzz[index] = 'fizz';
+      } else if (numeros[index] % 5 === 0){
+        arrayFizzBuzz[index] = 'buzz';
+      } else {
+        arrayFizzBuzz[index] = 'bug!';
+      }
+    }
+  }
+  return arrayFizzBuzz;
+}
 
 // Desafio 9 - Crie a função encode e a função decode
 
