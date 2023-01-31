@@ -55,17 +55,17 @@ function calcRectangleArea(base, height){
 
 function calcAllAreas(base, height, form){
   if (form === 'triângulo'){
-    let areaT = (base*height)/2;
-    return `O valor da área do triângulo é de: ${areaT}`;
+    return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
   }else if (form === 'retângulo'){
-    let areaR = base*height;
-    return `O valor da área do retângulo é de: ${areaR}`;
+    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
   }else {
     return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
   }
 }
 
 // Desafio 7 - Crie a função catAndMouse
+
+
 
 // Desafio 8 - Crie a função fizzBuzz
 
