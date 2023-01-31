@@ -1,6 +1,6 @@
 // Desafio 1 - Crie a função compareTrue
 
-function compareTrue (boolean1, boolean2) {
+function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2 === true) {
     return true;
   } else {
@@ -10,13 +10,25 @@ function compareTrue (boolean1, boolean2) {
 
 // Desafio 2 - Crie a função splitSentence
 
-function splitSentence (sentence) {
-  return sentence.split(" ");
+function splitSentence(sentence) {
+  return sentence.split(' ');
 }
 
 // https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20splits,string%20is%20split%20between%20words.
 
 // Desafio 3 - Crie a função concatName
+
+function concatName(arrayDeStrings){
+  let lastTransfer = arrayDeStrings.length - 1;
+
+  primeiraString = arrayDeStrings[0];
+
+  ultimaString = arrayDeStrings[lastTransfer];
+  
+  const arrayAlterado = `${ultimaString}, ${primeiraString}`;
+
+  return (arrayAlterado);
+}
 
 // Desafio 4 - Crie a função footballPoints
 
