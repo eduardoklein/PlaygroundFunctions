@@ -14,30 +14,30 @@ function splitSentence(sentence) {
 
 // Desafio 3 - Crie a função concatName
 
-function concatName(arrayDeStrings){
-  return `${arrayDeStrings[arrayDeStrings.length-1]}, ${arrayDeStrings[0]}`
+function concatName(arrayDeStrings) {
+  return `${arrayDeStrings[arrayDeStrings.length - 1]}, ${arrayDeStrings[0]}`;
 }
 
 // Desafio 4 - Crie a função footballPoints
 
-function footballPoints(wins, ties){
-  return (wins *3 + ties);
+function footballPoints(wins, ties) {
+  return (wins * 3 + ties);
 }
 
 // Desafio 5 - Crie a função highestCount
 
-function highestCount(arrayNumeros){
+function highestCount(arrayNumeros) {
   let maiorNumero = arrayNumeros[0];
   let contador = 0;
 
-  for (index = 0; index <= arrayNumeros.length; ++index){
-    if (arrayNumeros[index] > maiorNumero){
+  for (index = 0; index <= arrayNumeros.length; index += 1) {
+    if (arrayNumeros[index] > maiorNumero) {
       maiorNumero = arrayNumeros[index];
     }
   }
-  for (index = 0; index <=arrayNumeros.length; ++index){
-    if (arrayNumeros[index] === maiorNumero){
-      ++contador;
+  for (index = 0; index <= arrayNumeros.length; index += 1) {
+    if (arrayNumeros[index] === maiorNumero) {
+      contador += 1;
     }
   }
   return contador;
@@ -111,6 +111,14 @@ function decode(fraseParaDecodificar){
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 // Desafio 10 - Crie a função techList
+
+function techList(arrayTech, stringTech){
+  const arrayDeObjetos = [];
+  for (let index = 0; index < arrayTech.length; index += 1) {
+    arrayDeObjetos.push({name: stringTech, tech: arrayTech.sort()[index]})
+  }
+  return arrayDeObjetos;
+}
 
 // Não modifique essas linhas
 module.exports = {
