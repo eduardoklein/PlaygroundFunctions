@@ -38,6 +38,23 @@ function footballPoints(wins, ties){
 
 // Desafio 5 - Crie a função highestCount
 
+function highestCount(arrayNumeros){
+  let maiorNumero = arrayNumeros[0];
+  let contador = 0;
+
+  for (index = 0; index <= arrayNumeros.length; ++index){
+    if (arrayNumeros[index] > maiorNumero){
+      maiorNumero = arrayNumeros[index];
+    }
+  }
+  for (index = 0; index <=arrayNumeros.length; ++index){
+    if (arrayNumeros[index] === maiorNumero){
+      ++contador;
+    }
+  }
+  return contador;
+}
+
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
 // Desafio 7 - Crie a função catAndMouse
