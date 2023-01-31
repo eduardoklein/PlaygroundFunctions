@@ -1,11 +1,7 @@
 // Desafio 1 - Crie a função compareTrue
 
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 && boolean2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return boolean1 && boolean2;
 }
 
 // Desafio 2 - Crie a função splitSentence
@@ -19,15 +15,7 @@ function splitSentence(sentence) {
 // Desafio 3 - Crie a função concatName
 
 function concatName(arrayDeStrings){
-  let lastTransfer = arrayDeStrings.length - 1;
-
-  primeiraString = arrayDeStrings[0];
-
-  ultimaString = arrayDeStrings[lastTransfer];
-  
-  const arrayAlterado = `${ultimaString}, ${primeiraString}`;
-
-  return (arrayAlterado);
+  return `${arrayDeStrings[arrayDeStrings.length-1]}, ${arrayDeStrings[0]}`
 }
 
 // Desafio 4 - Crie a função footballPoints
@@ -56,6 +44,26 @@ function highestCount(arrayNumeros){
 }
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
+
+function calcTriangleArea(base, height){
+  return (base*height)/2;
+}
+
+function calcRectangleArea(base, height){
+  return base*height;
+}
+
+function calcAllAreas(base, height, form){
+  if (form === 'triângulo'){
+    let areaT = (base*height)/2;
+    return `O valor da área do triângulo é de: ${areaT}`;
+  }else if (form === 'retângulo'){
+    let areaR = base*height;
+    return `O valor da área do retângulo é de: ${areaR}`;
+  }else {
+    return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+  }
+}
 
 // Desafio 7 - Crie a função catAndMouse
 
