@@ -99,6 +99,17 @@ function fizzBuzz(numeros){
 
 // Desafio 9 - Crie a função encode e a função decode
 
+function encode(fraseParaCodificar){
+  return fraseParaCodificar.replaceAll('a', '1').replaceAll('e', '2').replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
+}
+
+function decode(fraseParaDecodificar){
+  return fraseParaDecodificar.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+}
+
+// https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
+
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
