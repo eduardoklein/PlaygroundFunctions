@@ -4,6 +4,40 @@ function compareTrue(boolean1, boolean2) {
   return boolean1 && boolean2;
 }
 
+const input1 = document.getElementById('first-input');
+const input2 = document.getElementById('second-input');
+const botao = document.getElementById('compareBtn');
+const resultadoP = document.getElementById('result');
+
+const errorMessage =
+  'Somente True ou False são aceitos como input. Por favor, tente novamente';
+
+botao.addEventListener('click', (event) => {
+  event.preventDefault();
+  const firstStringValue = input1.value.toLowerCase();
+  const secondStringValue = input2.value.toLowerCase();
+
+  const isInput1Valid =
+    firstStringValue === 'true' || firstStringValue === 'false';
+  const isInput2Valid =
+    secondStringValue === 'true' || secondStringValue === 'false';
+
+  if (!isInput1Valid || !isInput2Valid) {
+    resultP.textContent = errorMessage;
+    return;
+  }
+
+  // Converte as strings válidas para booleanos
+  const value1Boolean = firstStringValue === 'true';
+  const value2Boolean = secondStringValue === 'true';
+
+  // Chama a função compareTrue com os valores booleanos
+  const functionResult = compareTrue(value1Boolean, value2Boolean);
+
+  // Exibe o resultado na tag <p>
+  resultP.textContent = `O resultado da comparação é: ${functionResult}`;
+});
+
 // Desafio 2 - Crie a função splitSentence
 
 function splitSentence(sentence) {
